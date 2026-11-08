@@ -1,0 +1,68 @@
+{
+  "name": "dsh-video-kit",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Video generation for DeepSeek Harness: agent tools, sidebar panel, session insertion. Works with a local model server on your LAN or a cloud HTTP API.",
+  "license": "MIT",
+  "exports": {
+    ".": "./dist/index.js",
+    "./client": "./dist/client.cjs",
+    "./package.json": "./package.json",
+    "./chat-policy": "./dist/chat-policy.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "files": [
+    "assets",
+    "cordis.patch.yml",
+    "dist"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.1"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ],
+      "external": [
+        "dsh-tauri/client",
+        "dsh-tauri-ui/client"
+      ],
+      "platform": "web"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "devDependencies": {
+    "@testing-library/react": "16",
+    "@types/node": "22",
+    "@types/react": "19",
+    "@types/react-dom": "19",
+    "jsdom": "26",
+    "react": "19",
+    "react-dom": "19",
+    "tsdown": "^0.17.3",
+    "typescript": "~5.8.3",
+    "vitest": "3.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majie141949/dsh-video-kit.git"
+  },
+  "homepage": "https://github.com/majie141949/dsh-video-kit#readme",
+  "bugs": {
+    "url": "https://github.com/majie141949/dsh-video-kit/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "video",
+    "video-generation"
+  ]
+}
