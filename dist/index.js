@@ -8,6 +8,7 @@ import { pipeline } from "node:stream/promises";
 import { homedir } from "node:os";
 
 //#region src/shared/constants.ts
+const PACKAGE_NAME = "@majie141949/dsh-video-kit";
 const PLUGIN_ID = "dsh-video-kit";
 const ROUTE_PREFIX = "/api/video-kit";
 const TOOL_NAMES = {
@@ -1259,7 +1260,7 @@ async function apply(ctx) {
 			},
 			{
 				id: "chat-policy",
-				name: "dsh-video-kit/chat-policy"
+				name: `${PACKAGE_NAME}/chat-policy`
 			}
 		]
 	});

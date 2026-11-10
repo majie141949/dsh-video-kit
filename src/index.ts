@@ -1,4 +1,4 @@
-import { PLUGIN_ID, ROUTE_PREFIX } from './shared/constants'
+import { PACKAGE_NAME, PLUGIN_ID, ROUTE_PREFIX } from './shared/constants'
 import { Kit } from './host/kit'
 import { createHandler } from './host/server'
 import { createTools } from './host/tools'
@@ -33,7 +33,7 @@ export async function apply(ctx: any): Promise<void> {
       { id: 'persona', name: '@deepseek-ai/dsh-persona', config: { prefix: '你是一个友善、准确的对话助手。根据用户的问题自然回答；需要最新信息时可以搜索网页并引用来源。', complete: true, includeRuntimeContext: false } },
       { id: 'tool-web', name: '@deepseek-ai/dsh-tool-web', config: { search: true, fetch: false, searchTimeoutMs: 60000 } },
       { id: 'tool-presentation', name: '@deepseek-ai/dsh-agent-tool-presentation', config: { mode: 'native' } },
-      { id: 'chat-policy', name: 'dsh-video-kit/chat-policy' },
+      { id: 'chat-policy', name: `${PACKAGE_NAME}/chat-policy` },
     ],
   })
   ctx.effect(() => () => disposeChat(), `${PLUGIN_ID}: chat preset`)

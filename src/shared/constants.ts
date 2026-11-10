@@ -1,3 +1,4 @@
+export const PACKAGE_NAME = '@majie141949/dsh-video-kit'
 export const PLUGIN_ID = 'dsh-video-kit'
 export const ROUTE_PREFIX = '/api/video-kit'
 export const PANEL_ID = 'dsh-video-kit'

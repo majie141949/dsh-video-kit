@@ -4,13 +4,21 @@ DeepSeek Harness 的视频生成插件：给 Agent 提供视频工具、在侧�
 
 ## 安装
 
-在线安装（推荐），仓库根目录就是插件包：
+在线安装（推荐），已发布到 npm，走国内镜像也快：
+
+```sh
+dsh plugin --profile <profile> add @majie141949/dsh-video-kit
+```
+
+桌面版由应用独占管理插件，命令行安装不生效，在「插件扩展 → 添加插件」的输入框里填 `@majie141949/dsh-video-kit`，安装源选「中国大镜像源」。国内网络可先执行 `npm config set registry https://registry.npmmirror.com`。
+
+也可以从 GitHub 装（国内可能较慢）：
 
 ```sh
 dsh plugin --profile <profile> add github:majie141949/dsh-video-kit
 ```
 
-桌面版由应用独占管理插件，命令行安装不生效，在「插件扩展 → 添加插件」的输入框里填同一个 `github:majie141949/dsh-video-kit`。
+装好后插件按 npm 版本检查更新，作者发布新版本后应用里会出现「升级」。
 
 需要支持 bundle 与 client 插件的 DeepSeek Harness，最低声明版本 `0.2.1-rc.1`。面板依赖 `dsh-tauri`、`dsh-tauri-ui` 两个客户端包，桌面端自带；纯命令行环境只能用到 Agent 工具部分。
 
