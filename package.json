@@ -1,7 +1,7 @@
 {
   "name": "@majie141949/dsh-video-kit",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Video generation for DeepSeek Harness: agent tools, sidebar panel, session insertion. Works with a local model server on your LAN or a cloud HTTP API.",
   "license": "MIT",
   "exports": {
